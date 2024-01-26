@@ -1,3 +1,7 @@
+//
+// Información sobre la placa HuskyLens y el código en:
+// https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336
+//
 #include "HUSKYLENS.h"
 #include "SoftwareSerial.h"
 
@@ -38,7 +42,7 @@ void printResult(HUSKYLENSResult result){
         Serial.println(String()+F("Bloque:xCentro=")+result.xCenter+F(",yCentro=")+result.yCenter+F(",ancho=")+result.width+F(",alto=")+result.height+F(",ID=")+result.ID);
     }
     else if (result.command == COMMAND_RETURN_ARROW){
-        Serial.println(String()+F("Arrow:xOrigen=")+result.xOrigin+F(",yOrigen=")+result.yOrigin+F(",xDestino=")+result.xTarget+F(",yDestino=")+result.yTarget+F(",ID=")+result.ID);
+        Serial.println(String()+F("Flecha:xOrigen=")+result.xOrigin+F(",yOrigen=")+result.yOrigin+F(",xDestino=")+result.xTarget+F(",yDestino=")+result.yTarget+F(",ID=")+result.ID);
     }
     else{
         Serial.println("Objeto desconocido");
